@@ -1,102 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Jane - Architecture Design</title>
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style_architecture.css">
-    <link rel="icon" href="images/favicon.png">
-</head>
-<body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <header>
-        <nav>
-            <ul>
-                <li class="active"><a href="index.html">HOME</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h3>Monumental Landscape</h3>
-        <p>The project illustrates an attempt to rejuvenate a slaughterhouse
-            into an animal/ human resort in a future era when the differences
-            between virtual reality and reality are indistinguishable and humans no
-            longer require meat for nutrition intake. The slaughterhouse represents
-            the permanent quality in architecture and how architecture has the
-            ability to withstand time tangibly. Yet, the special characteristics of the
-            time period have predetermined that tangibility is not the only form of
-            reality. Moreover, the rejuvenation process incites the contemplation
-            of whether the built structure with long lifespans is necessary or just
-            another form of imprisonment, since the lingering spirit continuously
-            evoking the detrimental association to brutality and death.
-        </p>
-        <figure class="container">
-            <img src="images/monumental_chicken.png" alt="a">
-            <div class="overlay">
-                <div class="text">chicken</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_comic.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">comic</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_cow.png" alt="a">
-            <div class="overlay">
-                <div class="text">cow</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_details1.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">detail 1</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_details2.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">detail 2</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_details3.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">detail 3</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_elevator.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">elevator</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_end.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">end</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_night.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">night</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_park.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">park</div>
-            </div>
-        </figure>
-        <figure class="container">
-            <img src="images/monumental_warp.png" alt="a" class="image">
-            <div class="overlay">
-                <div class="text">warp</div>
-            </div>
-        </figure>
+*{
+    background-color: #a8a8a8;
+}
 
-    </main>
-    <footer></footer>
-</body>
+.skip a {
+    /* position: absolute;
+    top: 0;
+    z-index: index;
+    color: ; */
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+.skip a:focus{
+    /* top: 0;
+    color:; */
+    color: #000000;
+    background-color:#ffffff;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+li{
+    float: left;
+}
+li a{
+    display: block;
+    color: #ffffff;
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvetica, serif, sans-serif;
+}
+  /* Change the link color to #111 (black) on hover */
+li a:hover{
+    background-color: #111;
+}
+
+h3{
+    /* text-align: 0; */
+    font-size: 48px;
+    font-family: Helvetica, serif, sans-serif;
+    color: #ffffff;
+    background-color: #333;
+    padding: 15px;
+}
+p{
+    margin: 10px 5%;
+    font-size: 14px;
+    padding: 0px 0px 15px 15px;
+}
+
+.container {
+    float: left;
+    max-width:50vw;
+    height: 250px;
+    position: relative;
+    margin:0 auto;
+    object-fit: cover;
+    overflow:hidden;
+}
+.image{
+    display: block;
+    width:  auto;
+    height: 250px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+
+.container:hover .overlay {
+    opacity: 0.5;
+}
+
+.text {
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
