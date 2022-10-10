@@ -1,33 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>About Jane</title>
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style_about.css">
-    <link rel="icon" href="images/favicon.png">
-</head>
+*{
+    background-color: #a8a8a8;
+}
 
-<body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+.skip a {
+    /* position: absolute;
+    top: 0;
+    z-index: index;
+    color: ; */
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+.skip a:focus{
+    /* top: 0;
+    color:; */
+    color: #000000;
+    background-color:#ffffff;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+}
 
-    <header>
-        <h1>ABOUT ME</h1>
-        <nav>
-            <ul>
-                <li class="active"><a href="index.html">HOME</a></li>
-            </ul>
-        </nav>
-    </header>
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
 
-    <main class="container">
-            <figure>
-                <img src="images/me.jpeg" alt="Me">
-            </figure>
-            <p> Wenjing (Jane) Cen is a recent 3-year architecture graduate student in A. Alfred Taubman College of Architecture and Urban Planning at the University of Michigan. Prior to her enrollment in Taubman's 3G architecture program, she attended the Industrial and Interaction Design Program at Syracuse University. Her ideas and work focus on exploring the sensibility of spaces and how environments affect human interaction. Born in China and live in the US since 2005, Cen is motivated by her social responsibility to help communities grow. She is particularly interested in work related to historic preserving cultural heritage.
-                Her education has also equipped Cen with a strong skill set around Interaction Design. She believes strategic research and thorough analysis are the keys to better design, and that's why she tried to investigate the relation between food and culture shock in her undergraduate thesis project and implemented a series of strategies for people with culture shock to adopt a new lifestyle more efficiently.
-                Cen's Industrial Design background has naturally led her to a passionate interest in architecture. Because she is trained to be an attentive observer and has strong creative visualization skills, her ability to identify problems, imagine possible scenarios, and develop viable solutions have made her the best candidate to participate in an architecture project. In addition, her strong hand on skill and dedication to interaction design provide her a comprehensive knowledge about people and spaces.
-                Furthermore, Cen devotes a lot of time to her interest in animation and visual effects. The skill sets she acquired from her interest have helped her to transcribe outlandish ideas into practicality.
-            </p>
-    </main>
-    <footer></footer>
-</body>
+li{
+    float: left;
+}
+
+li a{
+    display: block;
+    color: #ffffff;
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Helvetica, serif, sans-serif;
+}
+li a:hover{
+    background-color: #111;
+}
+
+h1{
+    font-size: 48px;
+    font-family: Helvetica, serif, sans-serif;
+    color: #ffffff;
+    background-color: #333;
+    padding: 15px;
+}
+
+.container p{
+    margin: 10px 20%;
+    font-size: 14px;
+    padding: 0px 0px 15px 15px;
+}
+
+.container img{
+    width: 50vw;
+}
+
+.container{
+    position: relative;
+    /* background-size: 50px;
+    background-repeat: no-repeat; */
+    text-align: center;
+    color: #ffffff;
+}
